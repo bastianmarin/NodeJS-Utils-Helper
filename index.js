@@ -13,10 +13,10 @@ const Colors = require('colors');
 class LogHandler {
 
     /**
-     * Constructor de la clase LogHandler.
-     * @param {string} Name - El nombre de la clase.
-     * @param {string} Color - El color de la clase.
-     */
+    *   Constructor de la clase LogHandler.
+    *   @param {string} Name - El nombre de la clase.
+    *   @param {string} Color - El color de la clase.
+    */
     constructor(Name, Color) {
         this.ClassName = Name;
         this.Color = Colors[Color] ? Colors[Color] : Colors['white'];
