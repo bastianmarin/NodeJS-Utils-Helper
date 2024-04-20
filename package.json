@@ -1,0 +1,25 @@
+{
+  "name": "@iroak/logs",
+  "version": "1.0.0",
+  "description": "LogsJS of iroaK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bastianmarin/LogsJS.git"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "iroaK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bastianmarin/LogsJS/issues"
+  },
+  "homepage": "https://github.com/bastianmarin/LogsJS#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
