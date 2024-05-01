@@ -1,7 +1,7 @@
 /*
-    Name: Utils.js
+    Name: Logs.js
     Author: iroaK
-    Description: Un módulo de utilidades para Node.js que proporciona funciones útiles para el desarrollo de aplicaciones.
+    Description: Un módulo de registro para Node.js que proporciona funciones para registrar mensajes de log y errores en archivos de registro.
 */
 
 // Import Modules
