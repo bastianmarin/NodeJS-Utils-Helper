@@ -1,5 +1,5 @@
 {
-  "name": "@iroak/logs",
+  "name": "@nodejs-irk/logs",
   "version": "1.0.0",
   "description": "LogsJS of iroaK",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bastianmarin/LogsJS.git"
+    "url": "git+https://github.com/NodeJS-IRK/Logs.git"
   },
   "keywords": [
     "utils"
@@ -16,9 +16,9 @@
   "author": "iroaK",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bastianmarin/LogsJS/issues"
+    "url": "https://github.com/NodeJS-IRK/Logs/issues"
   },
-  "homepage": "https://github.com/bastianmarin/LogsJS#readme",
+  "homepage": "https://github.com/NodeJS-IRK/Logs#readme",
   "dependencies": {
     "colors": "^1.4.0"
   }
