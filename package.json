@@ -1,25 +1,25 @@
 {
-  "name": "@nodejs-irk/logs",
-  "version": "1.0.0",
-  "description": "LogsJS of iroaK",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NodeJS-IRK/Logs.git"
-  },
-  "keywords": [
-    "utils"
-  ],
-  "author": "iroaK",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NodeJS-IRK/Logs/issues"
-  },
-  "homepage": "https://github.com/NodeJS-IRK/Logs#readme",
-  "dependencies": {
-    "colors": "^1.4.0"
-  }
+    "name": "@bastianmarin/nodejs-utils-helper",
+    "version": "1.0.0",
+    "description": "Class to help with the development of NodeJS Class",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bastianmarin/nodejs-utils-helper.git"
+    },
+    "keywords": [
+        "utils"
+    ],
+    "author": "iroaK",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bastianmarin/nodejs-utils-helper/issues"
+    },
+    "homepage": "https://github.com/bastianmarin/nodejs-utils-helper#readme",
+    "dependencies": {
+        "colors": "^1.4.0"
+    }
 }

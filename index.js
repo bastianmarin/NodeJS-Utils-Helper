@@ -16,12 +16,15 @@ class LogHandler {
     *   Constructor de la clase LogHandler.
     *   @param {string} Name - El nombre de la clase.
     *   @param {string} Color - El color de la clase.
+    *   @param {boolean} withLog - Si se debe registrar el log en archivos.
     */
-    constructor(Name, Color) {
+    constructor(Name, Color, withLog = true) {
         this.ClassName = Name;
+        this.WithLog = withLog;
         this.Color = Colors[Color] ? Colors[Color] : Colors['white'];
-        if (!fs.existsSync('./Logs/')) {
+        if(withLog && !fs.existsSync('./Logs/')) {
             fs.mkdirSync('./Logs/');
+            this.createLog('Logs directory created.');
         }
     }
 
@@ -52,7 +55,7 @@ class LogHandler {
             let logMessage = `[${this.ClassName}] ${textLog}`;
             console.log(this.Color(logMessage));
             logMessage = `[${this.getCurrentTime()}][${this.ClassName}] ${textLog}`;
-            fs.appendFileSync('./Logs/logs.log', logMessage + '\n');
+            if(this.WithLog) fs.appendFileSync('./Logs/logs.log', logMessage + '\n');
         } catch (e) {
             console.error(e);
         }
@@ -70,12 +73,14 @@ class LogHandler {
             errorMessage = `[${this.getCurrentTime()}][${this.ClassName} (ERROR)] ${error}`;
             if (errorStack instanceof Error) console.error(errorStack.stack);
             else if (errorStack && typeof errorStack === 'string') console.error(errorStack);
-            const errorLogPath = `./Logs/errors.log`;
-            fs.appendFileSync(errorLogPath, errorMessage + '\n');
-            if (errorStack instanceof Error) {
-                fs.appendFileSync(errorLogPath, errorStack.stack + '\n');
-            } else if (errorStack && typeof errorStack === 'string') {
-                fs.appendFileSync(errorLogPath, errorStack + '\n');
+            if(this.WithLog){
+                const errorLogPath = `./Logs/errors.log`;
+                fs.appendFileSync(errorLogPath, errorMessage + '\n');
+                if (errorStack instanceof Error) {
+                    fs.appendFileSync(errorLogPath, errorStack.stack + '\n');
+                } else if (errorStack && typeof errorStack === 'string') {
+                    fs.appendFileSync(errorLogPath, errorStack + '\n');
+                }
             }
         } catch (e) {
             console.error(e);
