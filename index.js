@@ -64,9 +64,9 @@ class LogHandler {
     /**
     *   Registra un error en el log de errores y muestra el mensaje de error en la consola.
     *   @param {string} error - El mensaje de error.
-    *   @param {Error|string} errorStack - El stack de error o una cadena de texto adicional.
+    *   @param {Error|string|null} errorStack - El stack de error o una cadena de texto adicional.
     */
-    errorLog(error, errorStack) {
+    errorLog(error, errorStack = null) {
         try {
             let errorMessage = `[${this.ClassName} (ERROR)] ${error}`;
             console.error(Colors.red(errorMessage));
