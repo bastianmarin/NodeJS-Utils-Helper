@@ -49,11 +49,13 @@ class LogHandler {
     /**
     *   Crea un registro de log con el texto proporcionado.
     *   @param {string} textLog - El texto del log.
+    *   @param {string|null} colorOverride - El color del mensaje de log.
     */
-    createLog(textLog) {
+    createLog(textLog, colorOverride = null) {
         try {
             let logMessage = `[${this.ClassName}] ${textLog}`;
-            console.log(this.Color(logMessage));
+            if(colorOverride) console.log(Colors[colorOverride](logMessage));
+            else console.log(this.Color(logMessage));
             logMessage = `[${this.getCurrentTime()}][${this.ClassName}] ${textLog}`;
             if(this.WithLog) fs.appendFileSync('./Logs/logs.log', logMessage + '\n');
         } catch (e) {
