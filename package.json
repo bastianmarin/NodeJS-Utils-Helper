@@ -1,7 +1,7 @@
 {
     "name": "@bastianmarin/nodejs-utils-helper",
-    "version": "1.0.3",
-    "description": "Class to help with the development of NodeJS Class",
+    "version": "1.0.7",
+    "description": "Nodejs Utils Helper",
     "main": "index.js",
     "scripts": {
         "start": "node index.js"
