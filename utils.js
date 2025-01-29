@@ -91,3 +91,14 @@ function randomString(length) {
     return result;
 }
 exports.randomString = randomString;
+
+
+/**
+*   Converts a number to a money format string with commas as thousand separators.
+*   @param {number} number - The number to be formatted.
+*   @returns {string} The formatted money string.
+*/
+function numberToMoneyFormat(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+exports.numberToMoneyFormat = numberToMoneyFormat;
