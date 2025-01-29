@@ -9,6 +9,7 @@
 
 // Libraries neccesaries
 const fs = require('fs');
+const { type } = require('os');
 
 /**
 *   Recursively retrieves all file paths from the given directory.
@@ -99,6 +100,7 @@ exports.randomString = randomString;
 *   @returns {string} The formatted money string.
 */
 function numberToMoneyFormat(number) {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    if(typeof number == 'number') number = number.toString();
+    return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 exports.numberToMoneyFormat = numberToMoneyFormat;
