@@ -6,4 +6,5 @@ module.exports = {
     shuffleArray: require('./utils').shuffleArray,
     getFlagEmoji: require('./utils').getFlagEmoji,
     randomString: require('./utils').randomString,
+    numberToMoneyFormat: require('./utils').numberToMoneyFormat,
 };

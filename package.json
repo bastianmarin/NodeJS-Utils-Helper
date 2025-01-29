@@ -1,6 +1,6 @@
 {
     "name": "@bastianmarin/nodejs-utils-helper",
-    "version": "1.0.7",
+    "version": "1.0.9",
     "description": "Nodejs Utils Helper",
     "main": "index.js",
     "scripts": {
