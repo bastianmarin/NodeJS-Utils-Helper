@@ -101,6 +101,6 @@ exports.randomString = randomString;
 */
 function numberToMoneyFormat(number) {
     if(typeof number == 'number') number = number.toString();
-    return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return number.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 exports.numberToMoneyFormat = numberToMoneyFormat;
