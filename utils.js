@@ -7,16 +7,13 @@
 *   
 **************************************************************************/
 
-// Libraries neccesaries
-const fs = require('fs');
-const { type } = require('os');
-
 /**
 *   Recursively retrieves all file paths from the given directory.
 *   @param {string} currentPath - The path of the directory to read files from.
 *   @returns {string[]} An array of unique file paths.
 */
 function getAllFiles(currentPath) {
+    const fs = require('fs');
     let currentFiles = [];
     for (const thatFile of fs.readdirSync(currentPath)) {
         let filePath = currentPath + '/' + thatFile;
@@ -93,7 +90,6 @@ function randomString(length) {
 }
 exports.randomString = randomString;
 
-
 /**
 *   Converts a number to a money format string with commas as thousand separators.
 *   @param {number} number - The number to be formatted.
@@ -104,3 +100,14 @@ function numberToMoneyFormat(number) {
     return number.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 exports.numberToMoneyFormat = numberToMoneyFormat;
+
+/**
+ * Generates an MD5 hash for a given string.
+ * @param {string} string - The input string to hash.
+ * @returns {string} The MD5 hash of the input string in hexadecimal format.
+ */
+function getMD5Hash(string) {
+    const crypto = require('crypto');
+    return crypto.createHash('md5').update(string).digest('hex');
+}
+exports.getMD5Hash = getMD5Hash;
