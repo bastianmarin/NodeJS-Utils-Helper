@@ -7,4 +7,5 @@ module.exports = {
     getFlagEmoji: require('./utils').getFlagEmoji,
     randomString: require('./utils').randomString,
     numberToMoneyFormat: require('./utils').numberToMoneyFormat,
+    getMD5Hash: require('./utils').getMD5Hash
 };
