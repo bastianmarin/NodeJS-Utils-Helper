@@ -1,3 +1,5 @@
+const { isEmoji } = require('./utils');
+
 module.exports = {
     LogHandler: require('./logs').LogHandler,
     getAllFiles: require('./utils').getAllFiles,
@@ -7,5 +9,6 @@ module.exports = {
     getFlagEmoji: require('./utils').getFlagEmoji,
     randomString: require('./utils').randomString,
     numberToMoneyFormat: require('./utils').numberToMoneyFormat,
-    getMD5Hash: require('./utils').getMD5Hash
+    getMD5Hash: require('./utils').getMD5Hash,
+    isEmoji: require('./utils').isEmoji
 };
