@@ -111,3 +111,14 @@ function getMD5Hash(string) {
     return crypto.createHash('md5').update(string).digest('hex');
 }
 exports.getMD5Hash = getMD5Hash;
+
+/**
+*   Verifica si una cadena es un emoji válido.
+*   @param {string} emoji - El emoji a verificar.
+*   @returns {boolean} - true si el emoji es válido, false de lo contrario.
+*/
+function isEmoji(emoji) {
+    const emojiRegex = /^(\p{Emoji_Modifier_Base}|\p{Emoji_Presentation}|\p{Emoji}\uFE0F|\p{Emoji_Modifier}|\p{Emoji_Component}|\p{Extended_Pictographic})+$/u;
+    return emojiRegex.test(emoji);
+}
+exports.isEmoji = isEmoji;
